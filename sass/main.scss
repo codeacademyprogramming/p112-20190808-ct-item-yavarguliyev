@@ -18,8 +18,10 @@ body {
 
     .box {
         position: relative;
-        width: calc(400px - 30px);
-        height: calc(300px - 30px);
+        // width: calc(400px - 30px);
+        // height: calc(300px - 30px);
+        width: 300px;
+        height: 400px;
         background: #000;
         margin: 15px;
         box-sizing: border-box;
@@ -71,14 +73,17 @@ body {
 
     .image-box {
         position: relative;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
     }
 
-    img {
-        width: 500px;
-        height: 400px;
-        object-fit: cover;
-        transition: 0.5s;
-    }
+  
 
     .box:hover img {
         opacity: .2;
@@ -95,12 +100,19 @@ body {
         box-sizing: border-box;
         text-align: center;
 
+        a {
+            background-color: rgb(165, 20, 20);
+            border-radius: 50%;
+            margin: 30px 0;
+            visibility: hidden;
+        }
+
         a i {
-            margin: 0 0 10px;
-            padding: 0;
+            font-size: 10px;
+            padding: 10px;
             color: #fff;
             transition: 0.5s;
-            transform: translateY(-50%);
+            transform: translateY(50%);
             opacity: 0;
             visibility: hidden;
             padding: 0 5px;
@@ -115,15 +127,20 @@ body {
             opacity: 0;
             visibility: hidden;
             text-decoration: none;
+            margin-bottom: 20px;
+
+            hr {
+                width: 10%;
+            }
 
             span {
-                color: #888;
+                color: #fff;
                 display: block;
             }
         }
     }
 
-    .box:hover .content a i, .box:hover .content .icons, .box:hover .content .text  {
+    .box:hover .content a i, .box:hover .content .icons, .box:hover .content .text, .box:hover .content a  {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
